@@ -1,0 +1,17 @@
+{
+  "name": "privacy-pump-protocol-specs",
+  "description": "Versioned specifications, schemas, architecture, and threat models for Privacy Pump.",
+  "maturity": "Experimental specification",
+  "network": "Devnet and local development",
+  "topics": [
+    "privacy-pump",
+    "solana",
+    "privacy",
+    "private-multisig",
+    "personal-vault",
+    "zero-knowledge",
+    "arcium",
+    "specification"
+  ],
+  "visibility": "public-after-verification"
+}
