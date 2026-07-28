@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/privacy-pump/proposal-envelope.schema.json",
+  "title": "Privacy Pump proposal envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "vault",
+    "proposalIndex",
+    "action",
+    "payloadHash"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "vault": {
+      "type": "string",
+      "pattern": "^[1-9A-HJ-NP-Za-km-z]{32,44}$"
+    },
+    "proposalIndex": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)$"
+    },
+    "action": {
+      "enum": [
+        "transfer_sol",
+        "protected_withdrawal",
+        "update_settings",
+        "signer_set_change"
+      ]
+    },
+    "payloadHash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}
